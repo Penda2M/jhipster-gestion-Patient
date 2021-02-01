@@ -1,0 +1,26 @@
+{
+  "gestionPatientApp": {
+    "traitement": {
+      "home": {
+        "title": "Traitements",
+        "createLabel": "Créer un nouveau Traitement",
+        "createOrEditLabel": "Créer ou éditer un Traitement",
+        "search": "Recherche pour Traitement",
+        "notFound": "Aucun Traitement trouvé"
+      },
+      "created": "Un nouveau Traitement a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Traitement avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Traitement avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Traitement {{ id }} ?"
+      },
+      "detail": {
+        "title": "Traitement"
+      },
+      "idTraitement": "Id Traitement",
+      "frais": "Frais",
+      "ordonance": "Ordonance",
+      "medicament": "Medicament"
+    }
+  }
+}

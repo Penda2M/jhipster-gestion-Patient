@@ -1,0 +1,61 @@
+{
+  "name": "Medecin",
+  "fields": [
+    {
+      "fieldName": "matricule",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "grademedical",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ordonnance",
+      "otherEntityRelationshipName": "medecin",
+      "relationshipName": "ordonance"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rendezVous",
+      "otherEntityRelationshipName": "medecin",
+      "relationshipName": "rendezvous"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "service",
+      "otherEntityRelationshipName": "medecin",
+      "relationshipName": "service",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210201161643",
+  "entityTableName": "medecin",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

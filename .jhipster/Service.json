@@ -1,0 +1,35 @@
+{
+  "name": "Service",
+  "fields": [
+    {
+      "fieldName": "nomservice",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "medecin",
+      "otherEntityRelationshipName": "service",
+      "relationshipName": "medecin"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "administrateur",
+      "otherEntityRelationshipName": "service",
+      "relationshipName": "administrateur",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210201161843",
+  "entityTableName": "service",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

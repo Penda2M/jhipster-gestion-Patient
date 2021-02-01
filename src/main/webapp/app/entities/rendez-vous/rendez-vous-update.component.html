@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-rendez-vous-heading" jhiTranslate="gestionPatientApp.rendezVous.home.createOrEditLabel">Create or edit a Rendez Vous</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.rendezVous.idRv" for="field_idRv">Id Rv</label>
+                    <input type="number" class="form-control" name="idRv" id="field_idRv"
+                           formControlName="idRv"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.rendezVous.dateRv" for="field_dateRv">Date Rv</label>
+                    <div class="d-flex">
+                        <input id="field_dateRv" type="datetime-local" class="form-control" name="dateRv" formControlName="dateRv" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.rendezVous.medecin" for="field_medecin">Medecin</label>
+                    <select class="form-control" id="field_medecin" name="medecin" formControlName="medecin">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="medecinOption.id === editForm.get('medecin')!.value?.id ? editForm.get('medecin')!.value : medecinOption" *ngFor="let medecinOption of medecins; trackBy: trackById">{{ medecinOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.rendezVous.patient" for="field_patient">Patient</label>
+                    <select class="form-control" id="field_patient" name="patient" formControlName="patient">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="patientOption.id === editForm.get('patient')!.value?.id ? editForm.get('patient')!.value : patientOption" *ngFor="let patientOption of patients; trackBy: trackById">{{ patientOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

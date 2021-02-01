@@ -1,0 +1,26 @@
+{
+  "gestionPatientApp": {
+    "ordonnance": {
+      "home": {
+        "title": "Ordonnances",
+        "createLabel": "Create a new Ordonnance",
+        "createOrEditLabel": "Create or edit a Ordonnance",
+        "search": "Search for Ordonnance",
+        "notFound": "No Ordonnances found"
+      },
+      "created": "A new Ordonnance is created with identifier {{ param }}",
+      "updated": "A Ordonnance is updated with identifier {{ param }}",
+      "deleted": "A Ordonnance is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ordonnance {{ id }}?"
+      },
+      "detail": {
+        "title": "Ordonnance"
+      },
+      "date": "Date",
+      "traitement": "Traitement",
+      "medecin": "Medecin",
+      "patient": "Patient"
+    }
+  }
+}

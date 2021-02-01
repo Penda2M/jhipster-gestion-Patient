@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-traitement-heading" jhiTranslate="gestionPatientApp.traitement.home.createOrEditLabel">Create or edit a Traitement</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.traitement.idTraitement" for="field_idTraitement">Id Traitement</label>
+                    <input type="number" class="form-control" name="idTraitement" id="field_idTraitement"
+                           formControlName="idTraitement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.traitement.frais" for="field_frais">Frais</label>
+                    <input type="number" class="form-control" name="frais" id="field_frais"
+                           formControlName="frais"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.traitement.ordonance" for="field_ordonance">Ordonance</label>
+                    <select class="form-control" id="field_ordonance" name="ordonance" formControlName="ordonance">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="ordonnanceOption.id === editForm.get('ordonance')!.value?.id ? editForm.get('ordonance')!.value : ordonnanceOption" *ngFor="let ordonnanceOption of ordonnances; trackBy: trackById">{{ ordonnanceOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionPatientApp.traitement.medicament" for="field_medicament">Medicament</label>
+                    <select class="form-control" id="field_medicament" name="medicament" formControlName="medicament">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="medicamentOption.id === editForm.get('medicament')!.value?.id ? editForm.get('medicament')!.value : medicamentOption" *ngFor="let medicamentOption of medicaments; trackBy: trackById">{{ medicamentOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+{
+  "name": "Patient",
+  "fields": [
+    {
+      "fieldName": "nomero",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datenaissance",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lieunaissance",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "genre",
+      "fieldType": "Genre",
+      "fieldValues": "HOMME,FEMME"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cni",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ordonnance",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "ordonance"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rendezVous",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "rendezvous"
+    }
+  ],
+  "changelogDate": "20210201161743",
+  "entityTableName": "patient",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

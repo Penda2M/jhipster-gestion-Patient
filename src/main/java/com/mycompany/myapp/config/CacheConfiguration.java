@@ -47,6 +47,25 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Medecin.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Medecin.class.getName() + ".ordonances");
+            createCache(cm, com.mycompany.myapp.domain.Patient.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Patient.class.getName() + ".ordonances");
+            createCache(cm, com.mycompany.myapp.domain.Service.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Service.class.getName() + ".medecins");
+            createCache(cm, com.mycompany.myapp.domain.Ordonnance.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Ordonnance.class.getName() + ".medicaments");
+            createCache(cm, com.mycompany.myapp.domain.Medicament.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Medicament.class.getName() + ".ordonnances");
+            createCache(cm, com.mycompany.myapp.domain.Administrateur.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Administrateur.class.getName() + ".services");
+            createCache(cm, com.mycompany.myapp.domain.Medecin.class.getName() + ".rendezvous");
+            createCache(cm, com.mycompany.myapp.domain.Patient.class.getName() + ".rendezvous");
+            createCache(cm, com.mycompany.myapp.domain.Ordonnance.class.getName() + ".traitements");
+            createCache(cm, com.mycompany.myapp.domain.Medicament.class.getName() + ".traitements");
+            createCache(cm, com.mycompany.myapp.domain.RendezVous.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.RendezVous.class.getName() + ".traitements");
+            createCache(cm, com.mycompany.myapp.domain.Traitement.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,91 @@
+
+entity Medecin{
+	id Long
+    matricule String
+    nom String 
+    prenom String
+    grademedical String
+    telephone String
+    password String
+}
+
+entity Patient{
+	id Long
+	nomero Long 
+    nom String
+    prenom String
+    datenaissance Instant
+    lieunaissance String
+    adresse String 
+    genre Genre
+    telephone String
+    cni String
+    password String
+    
+}
+
+enum Genre {
+	HOMME,FEMME 
+}
+
+entity Service{
+	nomservice String
+    
+}
+
+entity Ordonnance{
+	id Long
+    date Instant
+}
+
+entity Medicament{
+	id Long
+    nom String
+    description String
+}
+
+entity Administrateur{
+	id Long
+    nom String
+    prenom String
+    email String
+    password String
+}
+
+entity RendezVous{
+	idRv Long
+    dateRv Instant
+}
+
+entity Traitement{
+	idTraitement Long
+    frais Long
+}
+
+relationship OneToMany{
+	Medecin{ordonance} to Ordonnance{medecin}
+} 
+relationship OneToMany{
+	Ordonnance{traitement} to Traitement{ordonance} 
+}
+relationship OneToMany{
+	Medicament{traitement} to Traitement{medicament}
+}
+relationship OneToMany{
+	Patient{ordonance} to Ordonnance{patient}
+}
+
+relationship OneToMany{
+	Service{medecin} to Medecin{service}
+}
+relationship OneToMany{
+	Administrateur{service} to Service {administrateur}
+}
+relationship OneToMany{
+	Medecin{rendezvous} to RendezVous{medecin}
+}
+relationship OneToMany{
+	Patient{rendezvous} to RendezVous{patient}
+}
+
+

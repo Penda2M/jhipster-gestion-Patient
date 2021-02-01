@@ -1,0 +1,32 @@
+{
+  "name": "Medicament",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "traitement",
+      "otherEntityRelationshipName": "medicament",
+      "relationshipName": "traitement"
+    }
+  ],
+  "changelogDate": "20210201162043",
+  "entityTableName": "medicament",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

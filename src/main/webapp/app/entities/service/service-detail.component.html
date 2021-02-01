@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="service">
+            <h2><span jhiTranslate="gestionPatientApp.service.detail.title">Service</span> {{ service.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionPatientApp.service.nomservice">Nomservice</span></dt>
+                <dd>
+                    <span>{{ service.nomservice }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionPatientApp.service.administrateur">Administrateur</span></dt>
+                <dd>
+                    <div *ngIf="service.administrateur">
+                        <a [routerLink]="['/administrateur', service.administrateur?.id, 'view']">{{ service.administrateur?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/service', service.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "gestionPatientApp": {
+    "administrateur": {
+      "home": {
+        "title": "Administrateurs",
+        "createLabel": "Créer un nouveau Administrateur",
+        "createOrEditLabel": "Créer ou éditer un Administrateur",
+        "search": "Recherche pour Administrateur",
+        "notFound": "Aucun Administrateur trouvé"
+      },
+      "created": "Un nouveau Administrateur a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Administrateur avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Administrateur avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Administrateur {{ id }} ?"
+      },
+      "detail": {
+        "title": "Administrateur"
+      },
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "email": "Email",
+      "password": "Password",
+      "service": "Service"
+    }
+  }
+}

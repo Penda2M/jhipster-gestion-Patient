@@ -1,0 +1,42 @@
+{
+  "name": "Ordonnance",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "traitement",
+      "otherEntityRelationshipName": "ordonance",
+      "relationshipName": "traitement"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medecin",
+      "otherEntityRelationshipName": "ordonance",
+      "relationshipName": "medecin",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "ordonance",
+      "relationshipName": "patient",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210201161943",
+  "entityTableName": "ordonnance",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

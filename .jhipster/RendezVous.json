@@ -1,0 +1,40 @@
+{
+  "name": "RendezVous",
+  "fields": [
+    {
+      "fieldName": "idRv",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dateRv",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medecin",
+      "otherEntityRelationshipName": "rendezvous",
+      "relationshipName": "medecin",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "rendezvous",
+      "relationshipName": "patient",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210201171334",
+  "entityTableName": "rendez_vous",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

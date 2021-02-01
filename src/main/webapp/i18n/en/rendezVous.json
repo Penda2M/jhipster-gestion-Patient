@@ -1,0 +1,26 @@
+{
+  "gestionPatientApp": {
+    "rendezVous": {
+      "home": {
+        "title": "Rendez Vous",
+        "createLabel": "Create a new Rendez Vous",
+        "createOrEditLabel": "Create or edit a Rendez Vous",
+        "search": "Search for Rendez Vous",
+        "notFound": "No Rendez Vous found"
+      },
+      "created": "A new Rendez Vous is created with identifier {{ param }}",
+      "updated": "A Rendez Vous is updated with identifier {{ param }}",
+      "deleted": "A Rendez Vous is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rendez Vous {{ id }}?"
+      },
+      "detail": {
+        "title": "Rendez Vous"
+      },
+      "idRv": "Id Rv",
+      "dateRv": "Date Rv",
+      "medecin": "Medecin",
+      "patient": "Patient"
+    }
+  }
+}

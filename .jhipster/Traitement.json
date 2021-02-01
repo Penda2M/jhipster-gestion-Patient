@@ -1,0 +1,40 @@
+{
+  "name": "Traitement",
+  "fields": [
+    {
+      "fieldName": "idTraitement",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "frais",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ordonnance",
+      "otherEntityRelationshipName": "traitement",
+      "relationshipName": "ordonance",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medicament",
+      "otherEntityRelationshipName": "traitement",
+      "relationshipName": "medicament",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210201171434",
+  "entityTableName": "traitement",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="administrateur">
+            <h2><span jhiTranslate="gestionPatientApp.administrateur.detail.title">Administrateur</span> {{ administrateur.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionPatientApp.administrateur.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ administrateur.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionPatientApp.administrateur.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ administrateur.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionPatientApp.administrateur.email">Email</span></dt>
+                <dd>
+                    <span>{{ administrateur.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionPatientApp.administrateur.password">Password</span></dt>
+                <dd>
+                    <span>{{ administrateur.password }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/administrateur', administrateur.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

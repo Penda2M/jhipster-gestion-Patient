@@ -1,0 +1,9 @@
+{
+  "gestionPatientApp": {
+    "Genre": {
+      "null": "",
+      "HOMME": "HOMME",
+      "FEMME": "FEMME"
+    }
+  }
+}
